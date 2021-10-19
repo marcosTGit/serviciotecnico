@@ -9,6 +9,10 @@
     "start": "node ./index.js ",
     "watch": "webpack --mode development"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcosTGit/serviciotecnico.git"
+  },
   "author": "Marcos Toledo - soportecat",
   "license": "ISC",
   "dependencies": {
@@ -28,6 +32,7 @@
     "jquery": "^3.6.0",
     "mysql2": "^2.3.2",
     "nodemon": "^2.0.13",
+    "ping": "^0.4.1",
     "popper.js": "^1.16.1",
     "pug": "^3.0.2",
     "sequelize": "^6.7.0",
