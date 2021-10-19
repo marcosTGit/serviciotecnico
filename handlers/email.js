@@ -1,0 +1,33 @@
+const nodemailer= require ('nodemailer');
+const pug= require ('pug');
+const juice= require ('juice');
+const htmlToText= require ('html-to-text');
+const util= require ('util');
+const emailConfig= require ('../config/email');
+
+let transport = nodemailer.createTransport({
+    // host: emailConfig.host,
+    // port: emailConfig.port,
+    service: emailConfig.service,
+    //secure: false, // true for 465, false for other ports
+    auth: {
+      user: emailConfig.user, 
+      pass: emailConfig.pass, 
+    },
+  });
+
+
+// send mail with defined transport object
+exports.enviar= async(datos)=>{
+  const html = pug.renderFile(`${__dirname}/../views/emails/${datos.archivo}`,{url : datos.url});
+  const text = htmlToText.fromString(html);
+  let mailOptions = {
+    from: '"Uptask " <foo@example.com>', 
+    to: datos.usuario.mail, 
+    subject: datos.subject, 
+    text, 
+    html
+  };
+  const infoEmail = await transport.sendMail(mailOptions);
+  return infoEmail;
+}
