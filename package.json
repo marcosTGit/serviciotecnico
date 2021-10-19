@@ -9,6 +9,10 @@
     "start": "node ./index.js ",
     "watch": "webpack --mode development"
   },
+ "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcosTGit/serviciotecnico.git"
+  },
   "author": "Marcos Toledo - soportecat",
   "license": "ISC",
   "dependencies": {
