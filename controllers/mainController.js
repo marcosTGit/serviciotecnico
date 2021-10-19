@@ -12,6 +12,7 @@ exports.index = async(req, res) =>{
         equipo_nombre=equipo[1].split('<');
         mac=data.split('=');
         
+        
         console.log(mac[1]);
         console.log(equipo_nombre[0]);
     });
