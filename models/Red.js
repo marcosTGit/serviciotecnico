@@ -19,7 +19,7 @@ const Red = db.define('red',{
 });
 // definimos llave foraneas o relacion con otra tabla
 
-Red.belongsTo(Etiqueta);// una tarea pertenece a un proyecto
+Red.belongsTo(Etiqueta);// una tarea pertenece a una etiqueta
 //Proyectos.hasMany(Tareas);
 
 module.exports=Red;

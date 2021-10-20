@@ -5,7 +5,7 @@ const db = require('../config/db');
 
 
 
-const TIpo_Equipo = db.define('TIpo_equipo',{
+const Tipo_Equipo = db.define('tipo_equipo',{
     id:{
         type: Sequelize.INTEGER,
         primaryKey:true,
@@ -14,4 +14,4 @@ const TIpo_Equipo = db.define('TIpo_equipo',{
     tipo: Sequelize.STRING(20),
     }
 );
-module.exports=TIpo_Equipo;
+module.exports=Tipo_Equipo;

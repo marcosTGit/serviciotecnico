@@ -5,7 +5,7 @@ const db = require('../config/db');
 
 
 
-const Etiqueta = db.define('etiqueta',{
+const Etiqueta = db.define('etiquetas',{
     id:{
         type: Sequelize.INTEGER,
         primaryKey:true,
